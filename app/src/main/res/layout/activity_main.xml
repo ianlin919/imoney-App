@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="404dp"
+        android:layout_height="714dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834"
+        app:srcCompat="@drawable/winne" />
+
+    <CalendarView
+        android:id="@+id/cld"
+        android:layout_width="379dp"
+        android:layout_height="291dp"
+        android:background="#40FFE53B"
+        android:outlineAmbientShadowColor="#0B0909"
+        android:outlineSpotShadowColor="#070707"
+        android:selectedWeekBackgroundColor="#03A9F4"
+        app:layout_constraintBottom_toTopOf="@+id/listview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="395dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_cld"
+            android:layout_width="206dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="行事曆"
+            app:backgroundTint="#D23643C3" />
+
+        <Button
+            android:id="@+id/btn_notebook"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="記事本"
+            app:backgroundTint="#D23643C3" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="379dp"
+        android:layout_height="128dp"
+        android:layout_marginBottom="8dp"
+        android:background="#4600D4CD"
+        android:outlineSpotShadowColor="#7C3838"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="415dp"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_out"
+            android:layout_width="123dp"
+            android:layout_height="111dp"
+            android:layout_weight="1"
+            android:text="支出"
+            app:backgroundTint="#CEE45F35" />
+
+        <Button
+            android:id="@+id/btn_in"
+            android:layout_width="127dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:text="收入"
+            app:backgroundTint="#CEE45F35" />
+
+        <Button
+            android:id="@+id/btn_chart"
+            android:layout_width="111dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:text="圖表分析"
+            app:backgroundTint="#CEE45F35" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
