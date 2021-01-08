@@ -4,18 +4,19 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DB extends SQLiteOpenHelper {
-    private static final String name = "memodata.db";
+public class Myexpend extends SQLiteOpenHelper
+{
+    private static final String name = "ddbase.db";
     private static final int version = 1;
-    DB(Context context)
+
+    Myexpend(Context context)
     {
         super(context,name,null,version);
     }
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL("CREATE TABLE myTable(event text PRIMARY KEY,year integer NOT NULL," +
-                "month integer NOT NULL,day integer NOT NULL,notee text NOT NULL)");
+        db.execSQL("CREATE TABLE myTable(money integer NOT NULL,reason text NOT NULL,year integer NOT NULL,month integer NOT NULL,day integer NOT NULL,seq integer PRIMARY KEY)");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion)
